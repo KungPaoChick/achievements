@@ -46,6 +46,8 @@ def delete_achievement(my_data):
         for element in source['resources']:
             if my_data in element['achievements']:
                 del element['achievements'][my_data]
+                print(colorama.Fore.GREEN,
+                        f'[*] Deleted "{my_data}"')
             else:
                 print(colorama.Fore.RED,
                         f'[!!] {my_data} does not exist in achievements',
